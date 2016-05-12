@@ -6,16 +6,16 @@ This is a game engine I am working on for my personal use. The code is unlicense
 Design notes and ramblings below
 
 Map
-The map has a hex grid that it will use for storing/retrieving cells.
-Cells are a position in the hex grid and will have a reference to a Tile.
-Tiles hold the information required to draw the graphic as well as any other
-game information we may choose to store.
+Has a grid used to store data for the map.
 
-HexGrid should only have methods for generating a basic grid, as well as adding,
-removing, retrieving cells.
+Grid
+Data structure and utilities for reading/writing to the grid that represents the map
 
-Hexagon should have methods for hexagon specific calculations like size, corners,
-etc...
+Tile
+Contains code for interaction and display of a map tile
 
-Map will do game related calculations for movement etc... HexGrid should be as much
-pure math as possible.
+Cell
+A position in the grid that represents the map
+
+Actor
+Generic container for entities and other game objects. Should expose api to do basic movements/interactions
